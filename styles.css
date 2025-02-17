@@ -6,6 +6,10 @@
     --text-color: #1f2937;
     --light-gray: #f3f4f6;
     --white-color: #ffffff;
+    --bg-secondary: #f7f7f7;
+    --bg-primary: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
 }
 
 * {
@@ -417,6 +421,111 @@ body {
     font-size: 0.9rem;
 }
 
+/* Profile Card Section */
+.profile-card-section {
+    padding: 80px 0;
+    background-color: var(--bg-secondary);
+}
+
+.profile-card {
+    background: var(--bg-primary);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-username {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.profile-name {
+    color: var(--text-primary);
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.profile-description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.profile-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-button i {
+    font-size: 1.2rem;
+}
+
+.social-button.github {
+    background: #24292e;
+    color: white;
+}
+
+.social-button.fiverr {
+    background: #1dbf73;
+    color: white;
+}
+
+.social-button.whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.social-button.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.social-button.email {
+    background: #ea4335;
+    color: white;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Contact Section */
 .contact-section {
     padding: 80px 0;
@@ -540,6 +649,23 @@ footer {
 
     .section-title {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-social-links {
+        justify-content: center;
     }
 }
 
